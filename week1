@@ -36,3 +36,25 @@ for(i in 1:100) {
       }     
 }
 
+# map family: purr package
+map_if(1:10, function(x){
+  x %% 2 == 0  # x modulo 2 means if the remainder of the division of x by 2 = 0 (is it even number?)
+},
+function(y){
+  y^2
+}) %>% unlist() # map_if always produce list, so piping it to make it prettier (unlist)
+
+So, putting it all together, this code will go through each number in the vector 1:5. 
+For each number, it checks if the number is even (x %% 2 == 0). 
+If the number is even, it applies the squaring function (y^2) to it. The unlist() function then converts the resulting list into a vector.
+In summary, for the vector 1:5, this code will square each even number and return a vector with the original odd numbers and the squared even numbers.
+
+
+
+
+
+
+
+
+
+
