@@ -1,0 +1,38 @@
+# Week1, Dec1, 2023
+
+Apply control structures to control flow of an R program
+Write functions
+Design an interface taht allows a user to modify elements of R code
+
+if(<condition1>) {
+      ## do something
+} else if(<condition2>) {
+      ## do something different
+} else {
+      ## do something different
+}
+Of course, the else clause is not necessary. 
+You could have a series of if clauses that always get executed if their respective conditions are true.
+if(<condition1>) {
+}
+if(<condition2>) {
+}
+
+# nested for loops
+x <- matrix(1:6, 2, 3)
+
+for(i in seq_len(nrow(x))) {
+        for(j in seq_len(ncol(x))) {
+                print(x[i, j])
+        }   
+}
+
+for(i in 1:100) {
+      print(i)
+
+      if(i > 20) {
+              ## Stop loop after 20 iterations
+              break  
+      }     
+}
+
